@@ -5,10 +5,20 @@
 // 2, 4 -> 16
 
 Console.WriteLine("Введите число A ");
-int A=Convert.ToInt32(Console.ReadLine());
+double A = Convert.ToInt32(Console.ReadLine());
+
 Console.WriteLine("Введите число B ");
-int B=Convert.ToInt32(Console.ReadLine());
+int B = Convert.ToInt32(Console.ReadLine());
 
-double result = Math.Pow(A,B);
+double Power(double num1, int num2)
+{
+    double result = 1;
 
-Console.WriteLine(result);
+    for (int i = 0; i < num2; i++)
+    {
+        result *= num1;
+    }
+    return result;
+}
+double res = Power(A,B);
+Console.WriteLine(res);
